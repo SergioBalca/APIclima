@@ -9,28 +9,24 @@ import net.serenitybdd.rest.SerenityRest;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Assertions;
 
 import static com.sofka.tasks.DoGet.doGet;
 import static com.sofka.utils.Resources.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
-import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 
+public class GetClimaLongLatStepDefinition extends ApiSetUp {
 
-
-public class GetClimaCiudadStepDefinition extends ApiSetUp {
-
-    public static Logger LOGGER = Logger.getLogger(GetClimaCiudadStepDefinition.class);
+    public static Logger LOGGER = Logger.getLogger(GetClimaLongLatStepDefinition.class);
     private Response response;
 
     JSONParser parser = new JSONParser();
     JSONObject responseBody = null;
 
-    @Given("el usuario ingresa al servicio OpenWeathermap")
-    public void elUsuarioIngresaAlServicioOpenWeathermap() {
+    @Given("el usuario ingresa al servicio de clima OpenWeatherMap")
+    public void elUsuarioIngresaAlServicioDeClimaOpenWeatherMap() {
         try {
             setUp(BASE_URL.getValue());
             LOGGER.info("INICIA AUTOMATIZACION");
@@ -41,14 +37,15 @@ public class GetClimaCiudadStepDefinition extends ApiSetUp {
         }
     }
 
-    @When("el usuario envia una peticion con el nombre de la {string}")
-    public void elUsuarioEnviaUnaPeticionConElNombreDeLa(String ciudad) {
+    @When("el usuario envia una peticion con la {double} y {double} del lugar")
+    public void elUsuarioEnviaUnaPeticionConLaYDelLugar(Double latitud, Double longitud) {
         try {
             actor.attemptsTo(
                     doGet()
                             .withTheResource(String.format(
-                                    GET_CLIMA_CIUDAD.getValue(),
-                                    ciudad,
+                                    GET_CLIMA_LONG_LAT.getValue(),
+                                    latitud,
+                                    longitud,
                                     TOKEN.getValue()
                             ))
             );
@@ -58,9 +55,8 @@ public class GetClimaCiudadStepDefinition extends ApiSetUp {
             Assertions.fail();
         }
     }
-
-    @Then("Deberia observar un {int} de respuesta OK, el nombre de la {string} elegida y el reporte del clima")
-    public void deberiaObservarUnDeRespuestaOKElNombreDeLaElegidaYElReporteDelClima(Integer codigo, String ciudad) throws ParseException {
+    @Then("el usuario deberia observar un {int} de respuesta OK y el reporte con el estado del clima con la {double} y {double} ingresadas")
+    public void elUsuarioDeberiaObservarUnDeRespuestaOKYElReporteConElEstadoDelClimaConLaYIngresadas(Integer codigo, Double latitud, Double longitud){
         try {
             response = (Response) SerenityRest.lastResponse().body();
             responseBody = (JSONObject) parser.parse(response.getBody().asString());
@@ -70,8 +66,8 @@ public class GetClimaCiudadStepDefinition extends ApiSetUp {
             actor.should(
                     seeThatResponse("El codigo de respuesta es: " + codigo,
                             response -> response.statusCode(codigo)),
-                    seeThat(act -> name, equalTo(ciudad)),
-                    seeThat(act -> weather, notNullValue())
+                    seeThat(act -> weather, notNullValue()),
+                    seeThat(act -> name, notNullValue())
             );
 
         } catch (Exception e){
@@ -79,10 +75,6 @@ public class GetClimaCiudadStepDefinition extends ApiSetUp {
             LOGGER.warn(e.getMessage());
             Assertions.fail();
         }
-
-
-
-
     }
 
 

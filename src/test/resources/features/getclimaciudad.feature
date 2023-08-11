@@ -8,7 +8,8 @@ Feature: Get Clima por ciudad
     When el usuario envia una peticion con el nombre de la "<ciudad>"
     Then Deberia observar un <codigo> de respuesta OK, el nombre de la "<ciudad>" elegida y el reporte del clima
     Examples:
-      | ciudad    | codigo |
-      | London    | 200    |
-      | Paris     | 200    |
-      | Barcelona | 200    |
+      | ciudad     | codigo |
+      | London     | 200    |
+      | Paris      | 200    |
+      | Barcelona  | 200    |
+

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Estado clima por ciudad</title>
+    <title>Clima por latitud y longitud</title>
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
@@ -126,8 +126,8 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > <a href="2107eae07c8b3ab0aa3599b522e41180e37cae0b1be52499fd1bb9896714570c.html">Get Clima Por Ciudad</a>
-        > Estado clima por ciudad
+            > <a href="cd33a90af00934434d82114179b1e87043c688ffda78a6f84b8595a1ed88996a.html">Get Clima Por Latitud Y Longitud</a>
+        > Clima por latitud y longitud
         </span>
         </div>
         <div class="rightbg"></div>
@@ -148,7 +148,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-08-2023 14:17</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 11-08-2023 15:21</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -163,7 +163,7 @@
                                 <div>
                                     <h3 class="discreet-story-header">
                                         <i class="fa fa-2x fa-comments-o"></i>
-                                        <span class="story-header-title">Get Clima Por Ciudad </span>
+                                        <span class="story-header-title">Get Clima Por Latitud Y Longitud </span>
                                     </h3>
 
                                 </div>
@@ -181,7 +181,7 @@
                             <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
                             <span class="test-case-title">
                                 <span class="success-color">
-                                    Estado clima por ciudad
+                                    Clima por latitud y longitud
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -242,7 +242,7 @@
         <div class="story-title">
             <h3 class="story-header">Scenario Outline</h3>
 
-            <div class="scenario">Given el usuario ingresa al servicio OpenWeathermap<br>When el usuario envia una peticion con el nombre de la "&lt;ciudad&gt;"<br>Then Deberia observar un &lt;codigo&gt; de respuesta OK, el nombre de la "&lt;ciudad&gt;" elegida y el reporte del clima</div>
+            <div class="scenario">Given el usuario ingresa al servicio de clima OpenWeatherMap<br>When el usuario envia una peticion con la &lt;latitud&gt; y &lt;longitud&gt; del lugar<br>Then el usuario deberia observar un &lt;codigo&gt; de respuesta OK y el reporte con el estado del clima con la &lt;latitud&gt; y &lt;longitud&gt; ingresadas</div>
 
         </div>
 
@@ -260,7 +260,8 @@
                     <thead>
                     <tr>
                         <th>#</th>
-                            <th>Ciudad</th>
+                            <th>Latitud</th>
+                            <th>Longitud</th>
                             <th>Codigo</th>
                     </tr>
                     </thead>
@@ -268,7 +269,10 @@
                         <tr>
                             <td class="test-SUCCESS"><a href="#0">1</a></td>
                                 <td class="test-SUCCESS"><a
-                                            href="#0">London</a>
+                                            href="#0">44.34</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#0">10.99</a>
                                 </td>
                                 <td class="test-SUCCESS"><a
                                             href="#0">200</a>
@@ -277,7 +281,10 @@
                         <tr>
                             <td class="test-SUCCESS"><a href="#1">2</a></td>
                                 <td class="test-SUCCESS"><a
-                                            href="#1">Paris</a>
+                                            href="#1">50</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#1">100</a>
                                 </td>
                                 <td class="test-SUCCESS"><a
                                             href="#1">200</a>
@@ -286,7 +293,10 @@
                         <tr>
                             <td class="test-SUCCESS"><a href="#2">3</a></td>
                                 <td class="test-SUCCESS"><a
-                                            href="#2">Barcelona</a>
+                                            href="#2">10</a>
+                                </td>
+                                <td class="test-SUCCESS"><a
+                                            href="#2">150</a>
                                 </td>
                                 <td class="test-SUCCESS"><a
                                             href="#2">200</a>
@@ -329,7 +339,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {ciudad=London, codigo=200}
+                                                Example: {latitud=44.34, longitud=10.99, codigo=200}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -338,7 +348,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">3.34s</span></td>
+                        <td width="100"><span class="top-level-step">4.44s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -356,7 +366,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Given el usuario ingresa al servicio OpenWeathermap
+                                                Given el usuario ingresa al servicio de clima OpenWeatherMap
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -364,7 +374,7 @@
                         </td>
 
                         <td width="130"><span class="nested-group-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-group-step">0.04s</span></td>
+                        <td width="100"><span class="nested-group-step">0.05s</span></td>
                     </tr>
                     <tr class="test-SUCCESS">
 
@@ -382,7 +392,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                When el usuario envia una peticion con el nombre de la "London"
+                                                When el usuario envia una peticion con la 44.34 y 10.99 del lugar
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -391,7 +401,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">3.12s</span></td>
+                        <td width="100"><span class="nested-step">4.19s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -422,7 +432,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">2.89s</span></td>
+                        <td width="100"><span class="nested-step">3.97s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -444,7 +454,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-1-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Checho executes a GET on the resource weather?q=London&appid=0f1433d636f7febe1666913d0a55991d
+                                                Checho executes a GET on the resource weather?lat=44.34&lon=10.99&appid=0f1433d636f7febe1666913d0a55991d
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -453,7 +463,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">2.87s</span></td>
+                        <td width="100"><span class="nested-step">3.94s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -471,7 +481,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                GET https://api.openweathermap.org/data/2.5/weather?q=London&amp;appid=0f1433d636f7febe1666913d0a55991d
+                                                GET https://api.openweathermap.org/data/2.5/weather?lat=44.34&amp;lon=10.99&amp;appid=0f1433d636f7febe1666913d0a55991d
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -496,9 +506,9 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Server: openresty<br>Date: Fri, 11 Aug 2023 19:17:05 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 476<br>Connection: keep-alive<br>X-Cache-Key: /data/2.5/weather?q=london<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Credentials: true<br>Access-Control-Allow-Methods: GET, POST</pre>
+                                        <pre>Server: openresty<br>Date: Fri, 11 Aug 2023 20:21:31 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 509<br>Connection: keep-alive<br>X-Cache-Key: /data/2.5/weather?lat=44.34&amp;lon=10.99<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Credentials: true<br>Access-Control-Allow-Methods: GET, POST</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;coord&quot;: {<br>        &quot;lon&quot;: -0.1257,<br>        &quot;lat&quot;: 51.5085<br>    },<br>    &quot;weather&quot;: [<br>        {<br>            &quot;id&quot;: 804,<br>            &quot;main&quot;: &quot;Clouds&quot;,<br>            &quot;description&quot;: &quot;overcast clouds&quot;,<br>            &quot;icon&quot;: &quot;04d&quot;<br>        }<br>    ],<br>    &quot;base&quot;: &quot;stations&quot;,<br>    &quot;main&quot;: {<br>        &quot;temp&quot;: 294.48,<br>        &quot;feels_like&quot;: 294.52,<br>        &quot;temp_min&quot;: 292.31,<br>        &quot;temp_max&quot;: 296.01,<br>        &quot;pressure&quot;: 1014,<br>        &quot;humidity&quot;: 71<br>    },<br>    &quot;visibility&quot;: 10000,<br>    &quot;wind&quot;: {<br>        &quot;speed&quot;: 4.63,<br>        &quot;deg&quot;: 0<br>    },<br>    &quot;clouds&quot;: {<br>        &quot;all&quot;: 99<br>    },<br>    &quot;dt&quot;: 1691781037,<br>    &quot;sys&quot;: {<br>        &quot;type&quot;: 2,<br>        &quot;id&quot;: 2075535,<br>        &quot;country&quot;: &quot;GB&quot;,<br>        &quot;sunrise&quot;: 1691728745,<br>        &quot;sunset&quot;: 1691782356<br>    },<br>    &quot;timezone&quot;: 3600,<br>    &quot;id&quot;: 2643743,<br>    &quot;name&quot;: &quot;London&quot;,<br>    &quot;cod&quot;: 200<br>}</pre>
+                                        <pre>{<br>    &quot;coord&quot;: {<br>        &quot;lon&quot;: 10.99,<br>        &quot;lat&quot;: 44.34<br>    },<br>    &quot;weather&quot;: [<br>        {<br>            &quot;id&quot;: 800,<br>            &quot;main&quot;: &quot;Clear&quot;,<br>            &quot;description&quot;: &quot;clear sky&quot;,<br>            &quot;icon&quot;: &quot;01n&quot;<br>        }<br>    ],<br>    &quot;base&quot;: &quot;stations&quot;,<br>    &quot;main&quot;: {<br>        &quot;temp&quot;: 291.9,<br>        &quot;feels_like&quot;: 291.95,<br>        &quot;temp_min&quot;: 291.07,<br>        &quot;temp_max&quot;: 294.94,<br>        &quot;pressure&quot;: 1022,<br>        &quot;humidity&quot;: 81,<br>        &quot;sea_level&quot;: 1022,<br>        &quot;grnd_level&quot;: 938<br>    },<br>    &quot;visibility&quot;: 10000,<br>    &quot;wind&quot;: {<br>        &quot;speed&quot;: 0.9,<br>        &quot;deg&quot;: 169,<br>        &quot;gust&quot;: 1.83<br>    },<br>    &quot;clouds&quot;: {<br>        &quot;all&quot;: 2<br>    },<br>    &quot;dt&quot;: 1691784734,<br>    &quot;sys&quot;: {<br>        &quot;type&quot;: 2,<br>        &quot;id&quot;: 2004688,<br>        &quot;country&quot;: &quot;IT&quot;,<br>        &quot;sunrise&quot;: 1691727243,<br>        &quot;sunset&quot;: 1691778523<br>    },<br>    &quot;timezone&quot;: 7200,<br>    &quot;id&quot;: 3163858,<br>    &quot;name&quot;: &quot;Zocca&quot;,<br>    &quot;cod&quot;: 200<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -539,7 +549,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then Deberia observar un 200 de respuesta OK, el nombre de la "London" elegida y el reporte del clima
+                                                Then el usuario deberia observar un 200 de respuesta OK y el reporte con el estado del clima con la 44.34 y 10.99 ingresadas
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -548,7 +558,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.12s</span></td>
+                        <td width="100"><span class="nested-step">0.13s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -588,7 +598,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then get clima ciudad step definition$$ lambda$518/0x0000000800639c40 should be 'London'
+                                                Then get clima long lat step definition$$ lambda$370/0x00000008005fa040 should be not null
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -610,7 +620,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then get clima ciudad step definition$$ lambda$519/0x000000080063a040 should be not null
+                                                Then get clima long lat step definition$$ lambda$371/0x00000008005fa440 should be not null
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -644,7 +654,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {ciudad=Paris, codigo=200}
+                                                Example: {latitud=50, longitud=100, codigo=200}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -653,7 +663,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.66s</span></td>
+                        <td width="100"><span class="top-level-step">1.39s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -671,7 +681,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Given el usuario ingresa al servicio OpenWeathermap
+                                                Given el usuario ingresa al servicio de clima OpenWeatherMap
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -697,7 +707,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                When el usuario envia una peticion con el nombre de la "Paris"
+                                                When el usuario envia una peticion con la 50 y 100 del lugar
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -706,7 +716,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.64s</span></td>
+                        <td width="100"><span class="nested-step">1.37s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -737,7 +747,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.64s</span></td>
+                        <td width="100"><span class="nested-step">1.37s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -759,7 +769,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-1-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Checho executes a GET on the resource weather?q=Paris&appid=0f1433d636f7febe1666913d0a55991d
+                                                Checho executes a GET on the resource weather?lat=50.0&lon=100.0&appid=0f1433d636f7febe1666913d0a55991d
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -768,7 +778,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.64s</span></td>
+                        <td width="100"><span class="nested-step">1.36s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -786,7 +796,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                GET https://api.openweathermap.org/data/2.5/weather?q=Paris&amp;appid=0f1433d636f7febe1666913d0a55991d
+                                                GET https://api.openweathermap.org/data/2.5/weather?lat=50.0&amp;lon=100.0&amp;appid=0f1433d636f7febe1666913d0a55991d
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -811,9 +821,9 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Server: openresty<br>Date: Fri, 11 Aug 2023 19:17:06 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 485<br>Connection: keep-alive<br>X-Cache-Key: /data/2.5/weather?q=paris<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Credentials: true<br>Access-Control-Allow-Methods: GET, POST</pre>
+                                        <pre>Server: openresty<br>Date: Fri, 11 Aug 2023 20:21:33 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 498<br>Connection: keep-alive<br>X-Cache-Key: /data/2.5/weather?lat=50&amp;lon=100<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Credentials: true<br>Access-Control-Allow-Methods: GET, POST</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;coord&quot;: {<br>        &quot;lon&quot;: 2.3488,<br>        &quot;lat&quot;: 48.8534<br>    },<br>    &quot;weather&quot;: [<br>        {<br>            &quot;id&quot;: 500,<br>            &quot;main&quot;: &quot;Rain&quot;,<br>            &quot;description&quot;: &quot;light rain&quot;,<br>            &quot;icon&quot;: &quot;10n&quot;<br>        }<br>    ],<br>    &quot;base&quot;: &quot;stations&quot;,<br>    &quot;main&quot;: {<br>        &quot;temp&quot;: 293.6,<br>        &quot;feels_like&quot;: 294.1,<br>        &quot;temp_min&quot;: 292.8,<br>        &quot;temp_max&quot;: 294.34,<br>        &quot;pressure&quot;: 1020,<br>        &quot;humidity&quot;: 92<br>    },<br>    &quot;visibility&quot;: 10000,<br>    &quot;wind&quot;: {<br>        &quot;speed&quot;: 3.09,<br>        &quot;deg&quot;: 190<br>    },<br>    &quot;rain&quot;: {<br>        &quot;1h&quot;: 0.76<br>    },<br>    &quot;clouds&quot;: {<br>        &quot;all&quot;: 75<br>    },<br>    &quot;dt&quot;: 1691781353,<br>    &quot;sys&quot;: {<br>        &quot;type&quot;: 2,<br>        &quot;id&quot;: 2041230,<br>        &quot;country&quot;: &quot;FR&quot;,<br>        &quot;sunrise&quot;: 1691728626,<br>        &quot;sunset&quot;: 1691781287<br>    },<br>    &quot;timezone&quot;: 7200,<br>    &quot;id&quot;: 2988507,<br>    &quot;name&quot;: &quot;Paris&quot;,<br>    &quot;cod&quot;: 200<br>}</pre>
+                                        <pre>{<br>    &quot;coord&quot;: {<br>        &quot;lon&quot;: 100,<br>        &quot;lat&quot;: 50<br>    },<br>    &quot;weather&quot;: [<br>        {<br>            &quot;id&quot;: 801,<br>            &quot;main&quot;: &quot;Clouds&quot;,<br>            &quot;description&quot;: &quot;few clouds&quot;,<br>            &quot;icon&quot;: &quot;02n&quot;<br>        }<br>    ],<br>    &quot;base&quot;: &quot;stations&quot;,<br>    &quot;main&quot;: {<br>        &quot;temp&quot;: 284.79,<br>        &quot;feels_like&quot;: 283.73,<br>        &quot;temp_min&quot;: 284.79,<br>        &quot;temp_max&quot;: 284.79,<br>        &quot;pressure&quot;: 1007,<br>        &quot;humidity&quot;: 66,<br>        &quot;sea_level&quot;: 1007,<br>        &quot;grnd_level&quot;: 821<br>    },<br>    &quot;visibility&quot;: 10000,<br>    &quot;wind&quot;: {<br>        &quot;speed&quot;: 0.37,<br>        &quot;deg&quot;: 223,<br>        &quot;gust&quot;: 0.51<br>    },<br>    &quot;clouds&quot;: {<br>        &quot;all&quot;: 22<br>    },<br>    &quot;dt&quot;: 1691784832,<br>    &quot;sys&quot;: {<br>        &quot;country&quot;: &quot;MN&quot;,<br>        &quot;sunrise&quot;: 1691791457,<br>        &quot;sunset&quot;: 1691844371<br>    },<br>    &quot;timezone&quot;: 28800,<br>    &quot;id&quot;: 2030469,<br>    &quot;name&quot;: &quot;Hövsgöl Aymag&quot;,<br>    &quot;cod&quot;: 200<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -854,7 +864,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then Deberia observar un 200 de respuesta OK, el nombre de la "Paris" elegida y el reporte del clima
+                                                Then el usuario deberia observar un 200 de respuesta OK y el reporte con el estado del clima con la 50 y 100 ingresadas
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -863,7 +873,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0s</span></td>
+                        <td width="100"><span class="nested-step">0.01s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -903,7 +913,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then get clima ciudad step definition$$ lambda$518/0x0000000800639c40 should be 'Paris'
+                                                Then get clima long lat step definition$$ lambda$370/0x00000008005fa040 should be not null
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -925,7 +935,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then get clima ciudad step definition$$ lambda$519/0x000000080063a040 should be not null
+                                                Then get clima long lat step definition$$ lambda$371/0x00000008005fa440 should be not null
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -959,7 +969,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
                                    style="display:block;">
                                     <span class="top-level-step">
-                                                Example: {ciudad=Barcelona, codigo=200}
+                                                Example: {latitud=10, longitud=150, codigo=200}
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -968,7 +978,7 @@
                         </td>
 
                         <td width="130"><span class="top-level-step">SUCCESS</span></td>
-                        <td width="100"><span class="top-level-step">0.68s</span></td>
+                        <td width="100"><span class="top-level-step">0.91s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -986,7 +996,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Given el usuario ingresa al servicio OpenWeathermap
+                                                Given el usuario ingresa al servicio de clima OpenWeatherMap
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -1012,7 +1022,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                When el usuario envia una peticion con el nombre de la "Barcelona"
+                                                When el usuario envia una peticion con la 10 y 150 del lugar
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1021,7 +1031,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.67s</span></td>
+                        <td width="100"><span class="nested-step">0.9s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1052,7 +1062,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.67s</span></td>
+                        <td width="100"><span class="nested-step">0.89s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1074,7 +1084,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-1-0-0')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Checho executes a GET on the resource weather?q=Barcelona&appid=0f1433d636f7febe1666913d0a55991d
+                                                Checho executes a GET on the resource weather?lat=10.0&lon=150.0&appid=0f1433d636f7febe1666913d0a55991d
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1083,7 +1093,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.66s</span></td>
+                        <td width="100"><span class="nested-step">0.89s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1101,7 +1111,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                GET https://api.openweathermap.org/data/2.5/weather?q=Barcelona&amp;appid=0f1433d636f7febe1666913d0a55991d
+                                                GET https://api.openweathermap.org/data/2.5/weather?lat=10.0&amp;lon=150.0&amp;appid=0f1433d636f7febe1666913d0a55991d
                                         </span>
                                 <span class="evidence">
                                         <span class="piece-of-evidence">
@@ -1126,9 +1136,9 @@
                                         <h4>Request Cookies</h4>
                                         <pre></pre>
                                         <h4>Response Headers</h4>
-                                        <pre>Server: openresty<br>Date: Fri, 11 Aug 2023 19:17:07 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 467<br>Connection: keep-alive<br>X-Cache-Key: /data/2.5/weather?q=barcelona<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Credentials: true<br>Access-Control-Allow-Methods: GET, POST</pre>
+                                        <pre>Server: openresty<br>Date: Fri, 11 Aug 2023 20:21:34 GMT<br>Content-Type: application/json; charset=utf-8<br>Content-Length: 520<br>Connection: keep-alive<br>X-Cache-Key: /data/2.5/weather?lat=10&amp;lon=150<br>Access-Control-Allow-Origin: *<br>Access-Control-Allow-Credentials: true<br>Access-Control-Allow-Methods: GET, POST</pre>
                                     <h4>Response Body</h4>
-                                        <pre>{<br>    &quot;coord&quot;: {<br>        &quot;lon&quot;: 2.159,<br>        &quot;lat&quot;: 41.3888<br>    },<br>    &quot;weather&quot;: [<br>        {<br>            &quot;id&quot;: 800,<br>            &quot;main&quot;: &quot;Clear&quot;,<br>            &quot;description&quot;: &quot;clear sky&quot;,<br>            &quot;icon&quot;: &quot;01n&quot;<br>        }<br>    ],<br>    &quot;base&quot;: &quot;stations&quot;,<br>    &quot;main&quot;: {<br>        &quot;temp&quot;: 300.96,<br>        &quot;feels_like&quot;: 304.09,<br>        &quot;temp_min&quot;: 299.6,<br>        &quot;temp_max&quot;: 303.81,<br>        &quot;pressure&quot;: 1020,<br>        &quot;humidity&quot;: 75<br>    },<br>    &quot;visibility&quot;: 10000,<br>    &quot;wind&quot;: {<br>        &quot;speed&quot;: 3.6,<br>        &quot;deg&quot;: 100<br>    },<br>    &quot;clouds&quot;: {<br>        &quot;all&quot;: 0<br>    },<br>    &quot;dt&quot;: 1691781158,<br>    &quot;sys&quot;: {<br>        &quot;type&quot;: 2,<br>        &quot;id&quot;: 18549,<br>        &quot;country&quot;: &quot;ES&quot;,<br>        &quot;sunrise&quot;: 1691729755,<br>        &quot;sunset&quot;: 1691780250<br>    },<br>    &quot;timezone&quot;: 7200,<br>    &quot;id&quot;: 3128760,<br>    &quot;name&quot;: &quot;Barcelona&quot;,<br>    &quot;cod&quot;: 200<br>}</pre>
+                                        <pre>{<br>    &quot;coord&quot;: {<br>        &quot;lon&quot;: 150,<br>        &quot;lat&quot;: 10<br>    },<br>    &quot;weather&quot;: [<br>        {<br>            &quot;id&quot;: 500,<br>            &quot;main&quot;: &quot;Rain&quot;,<br>            &quot;description&quot;: &quot;light rain&quot;,<br>            &quot;icon&quot;: &quot;10d&quot;<br>        }<br>    ],<br>    &quot;base&quot;: &quot;stations&quot;,<br>    &quot;main&quot;: {<br>        &quot;temp&quot;: 301.62,<br>        &quot;feels_like&quot;: 305.24,<br>        &quot;temp_min&quot;: 301.62,<br>        &quot;temp_max&quot;: 301.62,<br>        &quot;pressure&quot;: 1010,<br>        &quot;humidity&quot;: 73,<br>        &quot;sea_level&quot;: 1010,<br>        &quot;grnd_level&quot;: 1010<br>    },<br>    &quot;visibility&quot;: 10000,<br>    &quot;wind&quot;: {<br>        &quot;speed&quot;: 3.28,<br>        &quot;deg&quot;: 326,<br>        &quot;gust&quot;: 3.81<br>    },<br>    &quot;rain&quot;: {<br>        &quot;1h&quot;: 0.13<br>    },<br>    &quot;clouds&quot;: {<br>        &quot;all&quot;: 100<br>    },<br>    &quot;dt&quot;: 1691784833,<br>    &quot;sys&quot;: {<br>        &quot;country&quot;: &quot;FM&quot;,<br>        &quot;sunrise&quot;: 1691783447,<br>        &quot;sunset&quot;: 1691828384<br>    },<br>    &quot;timezone&quot;: 36000,<br>    &quot;id&quot;: 7626967,<br>    &quot;name&quot;: &quot;Makur Municipality&quot;,<br>    &quot;cod&quot;: 200<br>}</pre>
                                 </div>
                             </div>
                         </div>
@@ -1169,7 +1179,7 @@
                                 <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2-2')"
                                    style="display:block;">
                                     <span class="nested-step">
-                                                Then Deberia observar un 200 de respuesta OK, el nombre de la "Barcelona" elegida y el reporte del clima
+                                                Then el usuario deberia observar un 200 de respuesta OK y el reporte con el estado del clima con la 10 y 150 ingresadas
                                         </span>
                                 </a>
                                 <span class="evidence">
@@ -1178,7 +1188,7 @@
                         </td>
 
                         <td width="130"><span class="nested-step">SUCCESS</span></td>
-                        <td width="100"><span class="nested-step">0.01s</span></td>
+                        <td width="100"><span class="nested-step">0s</span></td>
                     </tr>
                         <tr>
                             <td colspan="5">
@@ -1218,7 +1228,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then get clima ciudad step definition$$ lambda$518/0x0000000800639c40 should be 'Barcelona'
+                                                Then get clima long lat step definition$$ lambda$370/0x00000008005fa040 should be not null
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -1240,7 +1250,7 @@
                         <td class="step-description-column">
                             <div class="step-description">
                                     <span class="nested-group-step">
-                                                Then get clima ciudad step definition$$ lambda$519/0x000000080063a040 should be not null
+                                                Then get clima long lat step definition$$ lambda$371/0x00000008005fa440 should be not null
                                         </span>
                                 <span class="evidence">
                                 </span>
@@ -1261,7 +1271,7 @@
                 <tr class="test-SUCCESS">
                         <td colspan="2"></td>
                     <td width="130"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>4.82s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>6.86s</em></span></td>
                 </tr>
 
             </table>
