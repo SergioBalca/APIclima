@@ -66,11 +66,13 @@ public class GetClimaCiudadStepDefinition extends ApiSetUp {
             response = (Response) SerenityRest.lastResponse().body();
             responseBody = (JSONObject) parser.parse(response.getBody().asString());
             String name = responseBody.get("name").toString();
+            Object weather = responseBody.get("weather");
 
             actor.should(
                     seeThatResponse("El codigo de respuesta es: " + codigo,
                             response -> response.statusCode(codigo)),
-                    seeThat(act -> name, equalTo(ciudad))
+                    seeThat(act -> name, equalTo(ciudad)),
+                    seeThat(act -> weather, notNullValue())
             );
 
         } catch (Exception e){
